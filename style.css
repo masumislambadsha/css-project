@@ -4,6 +4,11 @@ light-green - #7ed56f
 medium-green - #55c57a
 dark-green - #28B485
  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: sans-serif;
@@ -35,6 +40,12 @@ body {
 .logo {
   height: 35px;
 }
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .heading-primary {
   color: white;
   text-transform: uppercase;
@@ -44,10 +55,39 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
