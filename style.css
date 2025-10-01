@@ -51,6 +51,7 @@ body {
 .heading-primary {
   color: white;
   text-transform: uppercase;
+  /* backface-visibility: hidden; */
 }
 .heading-primary-main {
   display: block;
